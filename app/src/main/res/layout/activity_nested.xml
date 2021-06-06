@@ -9,7 +9,7 @@
     app:fixed_content_top="true"
     app:max_offset_top="150dp"
     app:trigger_offset_top="75dp"
-    tools:context="com.hzn.easypulllayout.nested.NestedActivity">
+    tools:context="com.hzn.hdcard.nested.NestedActivity">
 
     <ImageView
         android:id="@+id/topView"
@@ -19,7 +19,7 @@
         android:src="@mipmap/icon_rocket_white"
         app:layout_type="edge_top" />
 
-    <com.hzn.easypulllayout.listview.TopAndBottomView
+    <com.hzn.hdcard.listview.TopAndBottomView
         android:id="@+id/bottomView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
                 app:max_offset_right="120dp"
                 app:trigger_offset_right="60dp">
 
-                <com.hzn.easypulllayout.listview.LeftAndRightView
+                <com.hzn.hdcard.listview.LeftAndRightView
                     android:id="@+id/rightView"
                     android:layout_width="60dp"
                     android:layout_height="match_parent"
@@ -81,7 +81,7 @@
                 app:sticky_factor="0.85"
                 app:trigger_offset_left="60dp">
 
-                <com.hzn.easypulllayout.listview.LeftAndRightView
+                <com.hzn.hdcard.listview.LeftAndRightView
                     android:id="@+id/leftView"
                     android:layout_width="60dp"
                     android:layout_height="match_parent"

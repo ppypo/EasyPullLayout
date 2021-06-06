@@ -1,17 +1,12 @@
-package com.hzn.easypulllayout.recyclerview
+package com.hzn.hdcard.recyclerview
 
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
-import com.hzn.easypulllayout.R
-import com.hzn.easypulllayout.RvAdapter
+import com.hzn.hdcard.R
+import com.hzn.hdcard.RvAdapter
 import com.hzn.lib.EasyPullLayout
 import kotlinx.android.synthetic.main.activity_recyclerview.*
 

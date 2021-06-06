@@ -1,4 +1,4 @@
-package com.hzn.easypulllayout.recyclerview
+package com.hzn.hdcard.recyclerview
 
 import android.content.Context
 import android.os.Handler
@@ -6,7 +6,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
-import com.hzn.easypulllayout.R
+import com.hzn.hdcard.R
 import com.hzn.lib.EasyPathView
 import kotlinx.android.synthetic.main.view_transformer.view.*
 import java.text.SimpleDateFormat

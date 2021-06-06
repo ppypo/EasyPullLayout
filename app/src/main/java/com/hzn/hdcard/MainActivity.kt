@@ -1,13 +1,13 @@
-package com.hzn.easypulllayout
+package com.hzn.hdcard
 
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.hzn.easypulllayout.nested.NestedActivity
-import com.hzn.easypulllayout.fixed.FixedActivity
-import com.hzn.easypulllayout.listview.ListViewActivity
-import com.hzn.easypulllayout.recyclerview.RecyclerViewActivity
-import com.hzn.easypulllayout.viewpager.ViewPagerActivity
+import com.hzn.hdcard.nested.NestedActivity
+import com.hzn.hdcard.fixed.FixedActivity
+import com.hzn.hdcard.listview.ListViewActivity
+import com.hzn.hdcard.recyclerview.RecyclerViewActivity
+import com.hzn.hdcard.viewpager.ViewPagerActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

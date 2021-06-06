@@ -1,4 +1,4 @@
-package com.hzn.easypulllayout
+package com.hzn.hdcard
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -30,7 +30,7 @@ class RvAdapter(var context: Context, var list: List<Any>) : RecyclerView.Adapte
         var tv: TextView? = null
 
         init {
-            tv = itemView.findViewById(R.id.tv) as TextView?
+            tv = itemView.findViewById<TextView>(R.id.tv) as TextView?
         }
     }
 }

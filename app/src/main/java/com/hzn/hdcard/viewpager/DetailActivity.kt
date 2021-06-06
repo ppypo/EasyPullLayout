@@ -1,9 +1,9 @@
-package com.hzn.easypulllayout.viewpager
+package com.hzn.hdcard.viewpager
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 
-import com.hzn.easypulllayout.R
+import com.hzn.hdcard.R
 
 class DetailActivity : AppCompatActivity() {
 

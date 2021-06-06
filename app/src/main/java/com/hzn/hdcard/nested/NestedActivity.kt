@@ -1,4 +1,4 @@
-package com.hzn.easypulllayout.nested
+package com.hzn.hdcard.nested
 
 import android.content.Context
 import android.content.Intent
@@ -12,8 +12,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.Toast
-import com.hzn.easypulllayout.R
-import com.hzn.easypulllayout.viewpager.DetailActivity
+import com.hzn.hdcard.R
+import com.hzn.hdcard.viewpager.DetailActivity
 import com.hzn.lib.EasyPullLayout
 import kotlinx.android.synthetic.main.activity_nested.*
 import java.util.*
@@ -142,7 +142,7 @@ class NestedActivity : AppCompatActivity() {
             var iv: ImageView? = null
 
             init {
-                iv = itemView.findViewById(R.id.iv) as ImageView?
+                iv = itemView.findViewById<ImageView>(R.id.iv) as ImageView?
             }
         }
     }

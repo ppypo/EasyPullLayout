@@ -1,13 +1,11 @@
-package com.hzn.easypulllayout.listview
+package com.hzn.hdcard.listview
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.View
 import android.view.animation.BounceInterpolator
 import android.widget.LinearLayout
-import com.hzn.easypulllayout.R
-import com.hzn.easypulllayout.dpToPx
+import com.hzn.hdcard.R
 import kotlinx.android.synthetic.main.view_top_and_bottom.view.*
 
 /**

@@ -1,11 +1,11 @@
-package com.hzn.easypulllayout.fixed
+package com.hzn.hdcard.fixed
 
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.widget.ArrayAdapter
 import android.widget.Toast
-import com.hzn.easypulllayout.R
+import com.hzn.hdcard.R
 import kotlinx.android.synthetic.main.activity_fixed.*
 import java.util.*
 

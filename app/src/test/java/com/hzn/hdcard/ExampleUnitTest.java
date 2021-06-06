@@ -1,4 +1,4 @@
-package com.hzn.easypulllayout;
+package com.hzn.hdcard;
 
 import org.junit.Test;
 

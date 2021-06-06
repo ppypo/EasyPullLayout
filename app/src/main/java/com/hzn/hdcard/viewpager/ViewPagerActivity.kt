@@ -1,11 +1,11 @@
-package com.hzn.easypulllayout.viewpager
+package com.hzn.hdcard.viewpager
 
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentPagerAdapter
 import android.support.v7.app.AppCompatActivity
-import com.hzn.easypulllayout.R
+import com.hzn.hdcard.R
 import com.hzn.lib.EasyPullLayout
 import kotlinx.android.synthetic.main.activity_view_pager.*
 

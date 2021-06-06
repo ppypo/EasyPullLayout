@@ -12,7 +12,7 @@
     app:max_offset_top="150dp"
     app:trigger_offset_bottom="75dp"
     app:trigger_offset_top="75dp"
-    tools:context="com.hzn.easypulllayout.fixed.FixedActivity">
+    tools:context="com.hzn.hdcard.fixed.FixedActivity">
 
     <ImageView
         android:id="@+id/topView"

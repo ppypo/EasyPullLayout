@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
     android:orientation="vertical"
-    tools:context="com.hzn.easypulllayout.viewpager.ViewPagerActivity">
+    tools:context="com.hzn.hdcard.viewpager.ViewPagerActivity">
 
     <com.hzn.lib.EasyPullLayout
         android:id="@+id/epl"
@@ -18,13 +18,13 @@
         app:trigger_offset_left="60dp"
         app:trigger_offset_right="60dp">
 
-        <com.hzn.easypulllayout.listview.LeftAndRightView
+        <com.hzn.hdcard.listview.LeftAndRightView
             android:id="@+id/leftView"
             android:layout_width="60dp"
             android:layout_height="match_parent"
             app:layout_type="edge_left" />
 
-        <com.hzn.easypulllayout.listview.LeftAndRightView
+        <com.hzn.hdcard.listview.LeftAndRightView
             android:id="@+id/rightView"
             android:layout_width="60dp"
             android:layout_height="match_parent"

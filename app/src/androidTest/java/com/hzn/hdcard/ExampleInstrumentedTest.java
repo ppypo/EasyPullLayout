@@ -1,4 +1,4 @@
-package com.hzn.easypulllayout;
+package com.hzn.hdcard;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
