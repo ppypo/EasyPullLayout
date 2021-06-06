@@ -24,6 +24,12 @@
             android:text="epvAutobots"
             android:visibility="gone" />
 
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lottie_rawRes="@raw/lottie_circle"
+            app:lottie_autoPlay="true"/>
+
         <LinearLayout
             android:id="@+id/layout_text"
             android:layout_width="wrap_content"

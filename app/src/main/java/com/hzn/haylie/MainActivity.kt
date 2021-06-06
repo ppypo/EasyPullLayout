@@ -2,7 +2,7 @@ package com.hzn.haylie
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.hzn.haylie.nested.NestedActivity
 import com.hzn.haylie.fixed.FixedActivity
 import com.hzn.haylie.listview.ListViewActivity

@@ -2,8 +2,8 @@ package com.hzn.haylie.recyclerview
 
 import android.os.Bundle
 import android.os.Handler
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import android.widget.Toast
 import com.hzn.haylie.R
 import com.hzn.haylie.RvAdapter
@@ -28,7 +28,8 @@ class RecyclerViewActivity : AppCompatActivity() {
     }
 
     private fun initRecyclerView() {
-        rv.layoutManager = LinearLayoutManager(this).apply {
+        rv.layoutManager = LinearLayoutManager(this)
+            .apply {
             orientation = LinearLayoutManager.VERTICAL
         }
         rv.adapter = RvAdapter(this, list)

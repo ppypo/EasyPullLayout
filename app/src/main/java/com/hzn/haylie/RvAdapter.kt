@@ -1,7 +1,7 @@
 package com.hzn.haylie
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,11 +14,11 @@ import android.widget.TextView
  */
 class RvAdapter(var context: Context, var list: List<Any>) : RecyclerView.Adapter<RvAdapter.ViewHolderString>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolderString {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderString {
         return ViewHolderString(LayoutInflater.from(context).inflate(R.layout.item_string, parent, false))
     }
 
-    override fun onBindViewHolder(holder: ViewHolderString?, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolderString, position: Int) {
         holder?.tv?.text = list[position] as String
     }
 

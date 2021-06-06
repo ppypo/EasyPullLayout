@@ -4,9 +4,9 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,12 +37,16 @@ class NestedActivity : AppCompatActivity() {
     }
 
     private fun initRecyclerView() {
-        rvH1.layoutManager = LinearLayoutManager(this).apply {
+        rvH1.layoutManager = LinearLayoutManager(
+            this
+        ).apply {
             orientation = LinearLayoutManager.HORIZONTAL
         }
         rvH1.adapter = MyAdapter(this, list)
 
-        rvH2.layoutManager = LinearLayoutManager(this).apply {
+        rvH2.layoutManager = LinearLayoutManager(
+            this
+        ).apply {
             orientation = LinearLayoutManager.HORIZONTAL
         }
         rvH2.adapter = MyAdapter(this, list)
@@ -126,11 +130,11 @@ class NestedActivity : AppCompatActivity() {
 
     class MyAdapter(var context: Context, var list: List<Any>) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
 
-        override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
             return ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_image, parent, false))
         }
 
-        override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
+        override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             holder?.iv?.setImageResource(list[position] as Int)
         }
 
