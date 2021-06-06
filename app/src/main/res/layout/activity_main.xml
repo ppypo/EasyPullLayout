@@ -6,7 +6,7 @@
     android:background="@color/colorPrimaryDark"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context="com.hzn.hdcard.MainActivity">
+    tools:context="com.hzn.haylie.MainActivity">
 
     <Button
         android:id="@+id/btnRecyclerView"

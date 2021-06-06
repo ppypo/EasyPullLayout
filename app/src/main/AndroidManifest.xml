@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.hzn.hdcard">
+    package="com.hzn.haylie">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.hzn.hdcard.MainActivity">
+        <activity android:name="com.hzn.haylie.recyclerview.RecyclerViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,22 +17,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.hzn.hdcard.recyclerview.RecyclerViewActivity"
+            android:name="com.hzn.haylie.MainActivity"
             android:label="@string/activity_recycler_view" />
         <activity
-            android:name="com.hzn.hdcard.listview.ListViewActivity"
+            android:name="com.hzn.haylie.listview.ListViewActivity"
             android:label="@string/activity_list_view" />
         <activity
-            android:name="com.hzn.hdcard.viewpager.ViewPagerActivity"
+            android:name="com.hzn.haylie.viewpager.ViewPagerActivity"
             android:label="@string/activity_view_pager" />
         <activity
-            android:name="com.hzn.hdcard.viewpager.DetailActivity"
+            android:name="com.hzn.haylie.viewpager.DetailActivity"
             android:label="@string/activity_detail" />
         <activity
-            android:name="com.hzn.hdcard.fixed.FixedActivity"
+            android:name="com.hzn.haylie.fixed.FixedActivity"
             android:label="@string/activity_fixed" />
         <activity
-            android:name="com.hzn.hdcard.nested.NestedActivity"
+            android:name="com.hzn.haylie.nested.NestedActivity"
             android:label="@string/activity_nested" />
     </application>
 

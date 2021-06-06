@@ -1,4 +1,4 @@
-package com.hzn.hdcard.nested
+package com.hzn.haylie.nested
 
 import android.content.Context
 import android.content.Intent
@@ -12,8 +12,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.Toast
-import com.hzn.hdcard.R
-import com.hzn.hdcard.viewpager.DetailActivity
+import com.hzn.haylie.R
+import com.hzn.haylie.viewpager.DetailActivity
 import com.hzn.lib.EasyPullLayout
 import kotlinx.android.synthetic.main.activity_nested.*
 import java.util.*

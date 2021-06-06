@@ -1,11 +1,11 @@
-package com.hzn.hdcard.fixed
+package com.hzn.haylie.fixed
 
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.widget.ArrayAdapter
 import android.widget.Toast
-import com.hzn.hdcard.R
+import com.hzn.haylie.R
 import kotlinx.android.synthetic.main.activity_fixed.*
 import java.util.*
 

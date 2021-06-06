@@ -1,14 +1,15 @@
-package com.hzn.hdcard.recyclerview
+package com.hzn.haylie.recyclerview
 
 import android.content.Context
 import android.os.Handler
 import android.util.AttributeSet
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
-import com.hzn.hdcard.R
+import com.hzn.haylie.R
 import com.hzn.lib.EasyPathView
-import kotlinx.android.synthetic.main.view_transformer.view.*
+import kotlinx.android.synthetic.main.view_refresh.view.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -75,7 +76,8 @@ class TransformerView : LinearLayout {
     }
 
     private fun showAutobots() {
-        epvDecepticons.addOnAnimatorListener(object : EasyPathView.OnAnimatorListener() {
+        Log.d("hi", "showAutobots")
+        /*epvDecepticons.addOnAnimatorListener(object : EasyPathView.OnAnimatorListener() {
             override fun onAnimEnd(state: Int) {
                 epvDecepticons.visibility = View.GONE
                 epvAutobots.visibility = View.VISIBLE
@@ -87,11 +89,12 @@ class TransformerView : LinearLayout {
                 epvAutobots.startDraw()
             }
         })
-        epvDecepticons.startErase()
+        epvDecepticons.startErase()*/
     }
 
     private fun showDecepticons() {
-        epvAutobots.addOnAnimatorListener(object : EasyPathView.OnAnimatorListener() {
+        Log.d("hi", "showDecepticons")
+        /*epvAutobots.addOnAnimatorListener(object : EasyPathView.OnAnimatorListener() {
             override fun onAnimEnd(state: Int) {
                 epvAutobots.visibility = View.GONE
                 epvDecepticons.visibility = View.VISIBLE
@@ -103,11 +106,12 @@ class TransformerView : LinearLayout {
                 epvDecepticons.startDraw()
             }
         })
-        epvAutobots.startErase()
+        epvAutobots.startErase()*/
     }
 
     fun setFraction(startFraction: Float?, currentFraction: Float?) {
-        if (null == startFraction || null == currentFraction)
+        Log.d("hi", "showDecepticons")
+        /*if (null == startFraction || null == currentFraction)
             return
 
         val fraction = (currentFraction - startFraction) / (1 - startFraction)
@@ -118,11 +122,12 @@ class TransformerView : LinearLayout {
             TYPE_BOTTOM -> {
                 epvDecepticons.setAnimProgress(fraction)
             }
-        }
+        }*/
     }
 
     fun stop() {
-        epvAutobots.addOnAnimatorListener(null)
+        Log.d("hi", "stop")
+        /*epvAutobots.addOnAnimatorListener(null)
         epvAutobots.reset()
         epvDecepticons.addOnAnimatorListener(null)
         epvDecepticons.reset()
@@ -140,6 +145,6 @@ class TransformerView : LinearLayout {
                 epvDecepticons.visibility = View.VISIBLE
                 epvDecepticons.startErase()
             }
-        }
+        }*/
     }
 }

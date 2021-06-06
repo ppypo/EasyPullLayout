@@ -1,13 +1,13 @@
-package com.hzn.hdcard
+package com.hzn.haylie
 
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.hzn.hdcard.nested.NestedActivity
-import com.hzn.hdcard.fixed.FixedActivity
-import com.hzn.hdcard.listview.ListViewActivity
-import com.hzn.hdcard.recyclerview.RecyclerViewActivity
-import com.hzn.hdcard.viewpager.ViewPagerActivity
+import com.hzn.haylie.nested.NestedActivity
+import com.hzn.haylie.fixed.FixedActivity
+import com.hzn.haylie.listview.ListViewActivity
+import com.hzn.haylie.recyclerview.RecyclerViewActivity
+import com.hzn.haylie.viewpager.ViewPagerActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

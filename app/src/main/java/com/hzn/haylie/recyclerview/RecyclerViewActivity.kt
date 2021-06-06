@@ -1,45 +1,54 @@
-package com.hzn.hdcard.listview
+package com.hzn.haylie.recyclerview
 
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
-import android.widget.ArrayAdapter
+import android.support.v7.widget.LinearLayoutManager
 import android.widget.Toast
-import com.hzn.hdcard.R
+import com.hzn.haylie.R
+import com.hzn.haylie.RvAdapter
 import com.hzn.lib.EasyPullLayout
-import kotlinx.android.synthetic.main.activity_listview.*
+import kotlinx.android.synthetic.main.activity_recyclerview.*
 
-class ListViewActivity : AppCompatActivity() {
+class RecyclerViewActivity : AppCompatActivity() {
 
     companion object {
-        const val REFRESHING_TIME = 3000L
+        const val START_FRACTION = 0.5f
+        const val REFRESHING_TIME = 5000L
     }
+
+    var list: List<String> = (1..30).map { "item_string $it" }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_listview)
-        init()
+        setContentView(R.layout.activity_recyclerview)
+        initRecyclerView()
+        initEasyPullLayout()
+        epl.autoRefresh(EasyPullLayout.TYPE_EDGE_TOP)
     }
 
-    private fun init() {
-        val list = (1..30).map { "item_string $it" }
-        lv.adapter = ArrayAdapter<String>(this, R.layout.item_string, R.id.tv, list)
+    private fun initRecyclerView() {
+        rv.layoutManager = LinearLayoutManager(this).apply {
+            orientation = LinearLayoutManager.VERTICAL
+        }
+        rv.adapter = RvAdapter(this, list)
+    }
 
-        topView.setTop()
-        bottomView.setBottom()
+    private fun initEasyPullLayout() {
+        topView.type = TransformerView.TYPE_TOP
+        bottomView.type = TransformerView.TYPE_BOTTOM
 
         epl.setOnPullListener { type, fraction, changed ->
-            if (!changed)
-                return@setOnPullListener
-
             when (type) {
                 EasyPullLayout.TYPE_EDGE_TOP -> {
+                    topView.setFraction(START_FRACTION, fraction)
                     if (fraction == 1f)
                         topView.ready()
                     else
                         topView.idle()
                 }
                 EasyPullLayout.TYPE_EDGE_BOTTOM -> {
+                    bottomView.setFraction(START_FRACTION, fraction)
                     if (fraction == 1f)
                         bottomView.ready()
                     else
@@ -62,8 +71,10 @@ class ListViewActivity : AppCompatActivity() {
 
     private fun simulateLoading() {
         Handler().postDelayed({
-            Toast.makeText(this, "finish", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.finish), Toast.LENGTH_SHORT).show()
             epl.stop()
+            topView.stop()
+            bottomView.stop()
         }, REFRESHING_TIME)
     }
 }

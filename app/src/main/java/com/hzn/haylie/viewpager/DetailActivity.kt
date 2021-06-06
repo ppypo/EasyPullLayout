@@ -1,9 +1,9 @@
-package com.hzn.hdcard.viewpager
+package com.hzn.haylie.viewpager
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 
-import com.hzn.hdcard.R
+import com.hzn.haylie.R
 
 class DetailActivity : AppCompatActivity() {
 

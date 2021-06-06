@@ -1,4 +1,4 @@
-package com.hzn.hdcard;
+package com.hzn.haylie;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

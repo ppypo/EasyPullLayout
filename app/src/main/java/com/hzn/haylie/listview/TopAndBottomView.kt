@@ -1,4 +1,4 @@
-package com.hzn.hdcard.listview
+package com.hzn.haylie.listview
 
 import android.content.Context
 import android.util.AttributeSet
@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.animation.BounceInterpolator
 import android.widget.LinearLayout
-import com.hzn.hdcard.R
-import com.hzn.hdcard.dpToPx
+import com.hzn.haylie.R
+import com.hzn.haylie.dpToPx
 import kotlinx.android.synthetic.main.view_top_and_bottom.view.*
 
 /**
