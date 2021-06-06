@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/EasyPullLayout.iml" filepath="$PROJECT_DIR$/EasyPullLayout.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/EasyPullLayout_Edit.iml" filepath="$PROJECT_DIR$/.idea/modules/EasyPullLayout_Edit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/EasyPullLayout_Edit.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/EasyPullLayout_Edit.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib/EasyPullLayout_Edit.lib.iml" filepath="$PROJECT_DIR$/.idea/modules/lib/EasyPullLayout_Edit.lib.iml" />
     </modules>
   </component>
 </project>
