@@ -20,20 +20,15 @@ import java.util.*
  */
 class TransformerView : LinearLayout {
 
-    /*companion object {
-        const val TYPE_TOP = 0
-        const val TYPE_BOTTOM = 1
-    }*/
-
     private var date: String? = context.getString(R.string.refreshing_date)
 
-    var animatorHandler = Handler()
+    /*var animatorHandler = Handler()
     private val showDecepticonsRunnable: Runnable = Runnable {
         showDecepticons()
     }
     private val showAutobotsRunnable: Runnable = Runnable {
         showAutobots()
-    }
+    }*/
 
     constructor(context: Context?) : this(context, null)
     constructor(context: Context?, attrs: AttributeSet?) : this(context, attrs, 0)
@@ -42,40 +37,28 @@ class TransformerView : LinearLayout {
     }
 
     fun idle() {
-        tv.text = context.getString(R.string.idle)
+        tvDesc.text = context.getString(R.string.idle)
         tvDate.text = date
     }
 
     fun ready() {
-        tv.text = context.getString(R.string.ready)
+        tvDesc.text = context.getString(R.string.ready)
     }
 
     fun triggered() {
         date = SimpleDateFormat("yyyy-MM-dd  hh:mm:ss", Locale.getDefault()).format(Date())
-        tv.text = context.getString(R.string.triggered)
+        tvDesc.text = context.getString(R.string.triggered)
         tvDate.text = date
         showDecepticons()
     }
 
-    private fun showAutobots() {
-        LogUtil.d("showAutobots")
-        /*epvDecepticons.addOnAnimatorListener(object : EasyPathView.OnAnimatorListener() {
-            override fun onAnimEnd(state: Int) {
-                epvDecepticons.visibility = View.GONE
-                epvAutobots.visibility = View.VISIBLE
-                epvAutobots.addOnAnimatorListener(object : EasyPathView.OnAnimatorListener() {
-                    override fun onAnimEnd(state: Int) {
-                        animatorHandler.postDelayed(showDecepticonsRunnable, 500)
-                    }
-                })
-                epvAutobots.startDraw()
-            }
-        })
-        epvDecepticons.startErase()*/
-    }
-
     private fun showDecepticons() {
         LogUtil.d("showDecepticons")
+
+        // ready + loading.. 시점
+        lottie.setAnimation(R.raw.lottie_circle)
+        lottie.playAnimation()
+
         /*epvAutobots.addOnAnimatorListener(object : EasyPathView.OnAnimatorListener() {
             override fun onAnimEnd(state: Int) {
                 epvAutobots.visibility = View.GONE
@@ -92,7 +75,17 @@ class TransformerView : LinearLayout {
     }
 
     fun setFraction(startFraction: Float?, currentFraction: Float?) {
-        LogUtil.d("showDecepticons")
+        LogUtil.d("setFraction $startFraction : $currentFraction")
+
+        if (null == startFraction || null == currentFraction)
+            return
+
+        lottie.progress = currentFraction
+        lottie.scaleX = currentFraction
+        lottie.scaleY = currentFraction
+        //LogUtil.d("lottie.scale : ${lottie.scale}")
+        LogUtil.d("lottie.scalex : ${lottie.scaleX} / lottie.scaley : ${lottie.scaleY}")
+
         /*if (null == startFraction || null == currentFraction)
             return
 
@@ -109,6 +102,7 @@ class TransformerView : LinearLayout {
 
     fun stop() {
         LogUtil.d("stop")
+
         /*epvAutobots.addOnAnimatorListener(null)
         epvAutobots.reset()
         epvDecepticons.addOnAnimatorListener(null)

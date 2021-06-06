@@ -7,8 +7,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import android.widget.Toast
 import com.hzn.haylie.R
 import com.hzn.haylie.RvAdapter
+import com.hzn.haylie.util.LogUtil
 import com.hzn.lib.EasyPullLayout
 import kotlinx.android.synthetic.main.activity_recyclerview.*
+import kotlinx.android.synthetic.main.view_refresh.*
+import kotlinx.android.synthetic.main.view_refresh.view.*
 
 class RecyclerViewActivity : AppCompatActivity() {
 
@@ -38,12 +41,22 @@ class RecyclerViewActivity : AppCompatActivity() {
     private fun initEasyPullLayout() {
 
         epl.setOnPullListener { type, fraction, changed ->
+
+            // 초기화(ready + loading.. 시 변경처리)
+            //lottie.setAnimation(R.raw.lottie_circle)
+
             topView.setFraction(START_FRACTION, fraction)
-            if (fraction == 1f)
+            if (fraction == 1f) {
+                //LogUtil.d("initEasyPullLayout setOnPullListener ready : $type : $fraction : $changed")
                 topView.ready()
-            else
+
+            } else {
+                //LogUtil.d("initEasyPullLayout setOnPullListener idle : $type : $fraction : $changed")
                 topView.idle()
+            }
         }
+
+        // 최초 trigger 될 때 동작함
         epl.setOnTriggerListener {
             topView.triggered()
             simulateLoading()
