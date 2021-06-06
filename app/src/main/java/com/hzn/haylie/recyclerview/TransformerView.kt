@@ -3,12 +3,12 @@ package com.hzn.haylie.recyclerview
 import android.content.Context
 import android.os.Handler
 import android.util.AttributeSet
-import android.util.Log
+import android.util.Log.d
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import com.hzn.haylie.R
-import com.hzn.lib.EasyPathView
+import com.hzn.haylie.util.LogUtil
 import kotlinx.android.synthetic.main.view_refresh.view.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -20,25 +20,10 @@ import java.util.*
  */
 class TransformerView : LinearLayout {
 
-    companion object {
+    /*companion object {
         const val TYPE_TOP = 0
         const val TYPE_BOTTOM = 1
-    }
-
-    var type = TYPE_TOP
-        set(value) {
-            field = value
-            when (type) {
-                TYPE_TOP -> {
-                    epvAutobots.visibility = View.VISIBLE
-                    epvDecepticons.visibility = View.GONE
-                }
-                TYPE_BOTTOM -> {
-                    epvAutobots.visibility = View.GONE
-                    epvDecepticons.visibility = View.VISIBLE
-                }
-            }
-        }
+    }*/
 
     private var date: String? = context.getString(R.string.refreshing_date)
 
@@ -53,7 +38,7 @@ class TransformerView : LinearLayout {
     constructor(context: Context?) : this(context, null)
     constructor(context: Context?, attrs: AttributeSet?) : this(context, attrs, 0)
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
-        LayoutInflater.from(getContext()).inflate(R.layout.view_transformer, this, true)
+        LayoutInflater.from(getContext()).inflate(R.layout.view_refresh, this, true)
     }
 
     fun idle() {
@@ -69,14 +54,11 @@ class TransformerView : LinearLayout {
         date = SimpleDateFormat("yyyy-MM-dd  hh:mm:ss", Locale.getDefault()).format(Date())
         tv.text = context.getString(R.string.triggered)
         tvDate.text = date
-        when (type) {
-            TYPE_TOP -> showDecepticons()
-            TYPE_BOTTOM -> showAutobots()
-        }
+        showDecepticons()
     }
 
     private fun showAutobots() {
-        Log.d("hi", "showAutobots")
+        LogUtil.d("showAutobots")
         /*epvDecepticons.addOnAnimatorListener(object : EasyPathView.OnAnimatorListener() {
             override fun onAnimEnd(state: Int) {
                 epvDecepticons.visibility = View.GONE
@@ -93,7 +75,7 @@ class TransformerView : LinearLayout {
     }
 
     private fun showDecepticons() {
-        Log.d("hi", "showDecepticons")
+        LogUtil.d("showDecepticons")
         /*epvAutobots.addOnAnimatorListener(object : EasyPathView.OnAnimatorListener() {
             override fun onAnimEnd(state: Int) {
                 epvAutobots.visibility = View.GONE
@@ -110,7 +92,7 @@ class TransformerView : LinearLayout {
     }
 
     fun setFraction(startFraction: Float?, currentFraction: Float?) {
-        Log.d("hi", "showDecepticons")
+        LogUtil.d("showDecepticons")
         /*if (null == startFraction || null == currentFraction)
             return
 
@@ -126,7 +108,7 @@ class TransformerView : LinearLayout {
     }
 
     fun stop() {
-        Log.d("hi", "stop")
+        LogUtil.d("stop")
         /*epvAutobots.addOnAnimatorListener(null)
         epvAutobots.reset()
         epvDecepticons.addOnAnimatorListener(null)

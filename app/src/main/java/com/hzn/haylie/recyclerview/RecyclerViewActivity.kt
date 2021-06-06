@@ -35,36 +35,16 @@ class RecyclerViewActivity : AppCompatActivity() {
     }
 
     private fun initEasyPullLayout() {
-        topView.type = TransformerView.TYPE_TOP
-        bottomView.type = TransformerView.TYPE_BOTTOM
 
         epl.setOnPullListener { type, fraction, changed ->
-            when (type) {
-                EasyPullLayout.TYPE_EDGE_TOP -> {
-                    topView.setFraction(START_FRACTION, fraction)
-                    if (fraction == 1f)
-                        topView.ready()
-                    else
-                        topView.idle()
-                }
-                EasyPullLayout.TYPE_EDGE_BOTTOM -> {
-                    bottomView.setFraction(START_FRACTION, fraction)
-                    if (fraction == 1f)
-                        bottomView.ready()
-                    else
-                        bottomView.idle()
-                }
-            }
+            topView.setFraction(START_FRACTION, fraction)
+            if (fraction == 1f)
+                topView.ready()
+            else
+                topView.idle()
         }
         epl.setOnTriggerListener {
-            when (it) {
-                EasyPullLayout.TYPE_EDGE_TOP -> {
-                    topView.triggered()
-                }
-                EasyPullLayout.TYPE_EDGE_BOTTOM -> {
-                    bottomView.triggered()
-                }
-            }
+            topView.triggered()
             simulateLoading()
         }
     }
@@ -74,7 +54,6 @@ class RecyclerViewActivity : AppCompatActivity() {
             Toast.makeText(this, getString(R.string.finish), Toast.LENGTH_SHORT).show()
             epl.stop()
             topView.stop()
-            bottomView.stop()
         }, REFRESHING_TIME)
     }
 }

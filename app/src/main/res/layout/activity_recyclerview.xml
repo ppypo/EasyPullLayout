@@ -18,12 +18,6 @@
         android:layout_height="wrap_content"
         app:layout_type="edge_top" />
 
-    <com.hzn.haylie.recyclerview.TransformerView
-        android:id="@+id/bottomView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_type="edge_bottom" />
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv"
         android:layout_width="match_parent"

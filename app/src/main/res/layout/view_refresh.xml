@@ -15,12 +15,15 @@
             android:id="@+id/epvDecepticons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="epvDecepticons  " />
+            android:text="epvDecepticons "
+            android:visibility="gone" />
         <TextView
             android:id="@+id/epvAutobots"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="epvAutobots" />
+            android:text="epvAutobots"
+            android:visibility="gone" />
+
         <LinearLayout
             android:id="@+id/layout_text"
             android:layout_width="wrap_content"
