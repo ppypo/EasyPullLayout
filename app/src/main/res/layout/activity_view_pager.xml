@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context="com.hzn.haylie.viewpager.ViewPagerActivity">
 
-    <com.hzn.lib.EasyPullLayout
+    <com.hzn.haylie.lib.EasyPullLayout
         android:id="@+id/epl"
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -35,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             app:layout_type="content" />
-    </com.hzn.lib.EasyPullLayout>
+    </com.hzn.haylie.lib.EasyPullLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"

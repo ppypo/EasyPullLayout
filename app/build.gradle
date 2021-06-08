@@ -5,7 +5,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.hzn.easypulllayout"
+        applicationId "com.hzn.haylie"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
@@ -26,7 +26,6 @@ dependencies {
     androidTestCompile('androidx.test.espresso:espresso-core:3.1.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    implementation project(':lib')
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
     implementation 'androidx.appcompat:appcompat:1.0.0'

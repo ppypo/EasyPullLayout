@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.appcompat.app.AppCompatActivity
 import com.hzn.haylie.R
-import com.hzn.lib.EasyPullLayout
+import com.hzn.haylie.lib.EasyPullLayout
 import kotlinx.android.synthetic.main.activity_view_pager.*
 
 class ViewPagerActivity : AppCompatActivity() {

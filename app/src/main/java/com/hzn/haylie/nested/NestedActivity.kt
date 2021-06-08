@@ -14,7 +14,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import com.hzn.haylie.R
 import com.hzn.haylie.viewpager.DetailActivity
-import com.hzn.lib.EasyPullLayout
+import com.hzn.haylie.lib.EasyPullLayout
 import kotlinx.android.synthetic.main.activity_nested.*
 import java.util.*
 

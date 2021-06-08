@@ -7,11 +7,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import android.widget.Toast
 import com.hzn.haylie.R
 import com.hzn.haylie.RvAdapter
-import com.hzn.haylie.util.LogUtil
-import com.hzn.lib.EasyPullLayout
+import com.hzn.haylie.lib.EasyPullLayout
 import kotlinx.android.synthetic.main.activity_recyclerview.*
-import kotlinx.android.synthetic.main.view_refresh.*
-import kotlinx.android.synthetic.main.view_refresh.view.*
 
 class RecyclerViewActivity : AppCompatActivity() {
 

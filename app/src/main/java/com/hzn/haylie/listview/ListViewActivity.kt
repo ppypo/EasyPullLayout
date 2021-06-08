@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.hzn.haylie.R
-import com.hzn.lib.EasyPullLayout
+import com.hzn.haylie.lib.EasyPullLayout
 import kotlinx.android.synthetic.main.activity_listview.*
 
 class ListViewActivity : AppCompatActivity() {
